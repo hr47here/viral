@@ -350,3 +350,39 @@ min-width:220px;
 }
 
 }
+
+.video-player{
+
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+z-index:9999;
+
+}
+
+.video-player iframe{
+
+width:100%;
+height:100%;
+border:none;
+
+}
+
+#closeVideo{
+
+position:absolute;
+top:20px;
+right:20px;
+background:red;
+color:white;
+border:none;
+padding:10px 15px;
+font-size:20px;
+cursor:pointer;
+z-index:10000;
+
+}
