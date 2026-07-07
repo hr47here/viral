@@ -12,3 +12,7 @@ closeVideo.onclick = function () {
     videoPlayer.style.display = "none";
     playerFrame.src = "";
 };
+function playVideo(link){
+    videoPlayer.style.display = "block";
+    playerFrame.src = link + "?autoplay=1";
+}
