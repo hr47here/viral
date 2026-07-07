@@ -1,40 +1,23 @@
-// Play button
-document.getElementById("playBtn").addEventListener("click", function () {
+const playBtn=document.getElementById("playBtn");
+const videoPlayer=document.getElementById("videoPlayer");
+const playerFrame=document.getElementById("playerFrame");
+const closeVideo=document.getElementById("closeVideo");
 
-    // Replace with your video link
-    window.open("https://YOUR_VIDEO_LINK_HERE", "_blank");
+playBtn.onclick=function(){
 
-});
+videoPlayer.style.display="block";
 
-// Card click
-document.querySelectorAll(".card").forEach(function(card){
+playerFrame.src="https://drive.google.com/file/d/1pRJK-X5yiK9866JU4H88UQnfT5L62-rR/preview?autoplay=1";
 
-    card.addEventListener("click",function(){
+}
 
-        alert("Add your video link here.");
+closeVideo.onclick=function(){
 
-    });
+videoPlayer.style.display="none";
 
-});
+playerFrame.src="";
 
-// Search
-const search=document.querySelector(".search input");
-
-search.addEventListener("keyup",function(){
-
-    let value=this.value.toLowerCase();
-
-    document.querySelectorAll(".card").forEach(function(card){
-
-        let title=card.innerText.toLowerCase();
-
-        if(title.includes(value)){
-
-            card.style.display="block";
-
-        }else{
-
-            card.style.display="none";
+}            card.style.display="none";
 
         }
 
