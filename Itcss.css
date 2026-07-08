@@ -441,6 +441,44 @@ z-index:10000;
     margin:30px 0;
     box-shadow:0 0 20px rgba(255,0,0,.2);
 }
+.menu-toggle{
+display:none;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#111;
+padding:20px 0;
+}
+
+.menu.active{
+display:flex;
+}
+
+.menu li{
+margin:15px 0;
+text-align:center;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.search{
+display:none;
+}
+
+}
 
 .contact-box h2{
     color:#ff2d55;
