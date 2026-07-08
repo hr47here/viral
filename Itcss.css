@@ -406,3 +406,9 @@ z-index:10000;
 .likeBtn.liked{
     background:#00c853;
 }
+
+.meta{
+    color:#b3b3b3;
+    font-size:13px;
+    margin-top:4px;
+}
