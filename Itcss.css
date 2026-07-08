@@ -386,3 +386,18 @@ cursor:pointer;
 z-index:10000;
 
 }
+
+.likeBtn{
+    background:#ff0033;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.likeBtn.liked{
+    background:#00c853;
+   }
