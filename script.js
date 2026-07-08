@@ -32,3 +32,28 @@ searchBox.addEventListener("keyup", function () {
         }
     });
 });
+
+const likeBtns = document.querySelectorAll(".likeBtn");
+
+likeBtns.forEach((btn,index)=>{
+
+    if(localStorage.getItem("like"+index)=="true"){
+        btn.innerHTML="❤️ Liked";
+        btn.classList.add("liked");
+    }
+
+    btn.onclick=function(){
+
+        if(btn.classList.contains("liked")){
+            btn.classList.remove("liked");
+            btn.innerHTML="🤍 Like";
+            localStorage.setItem("like"+index,false);
+        }else{
+            btn.classList.add("liked");
+            btn.innerHTML="❤️ Liked";
+            localStorage.setItem("like"+index,true);
+        }
+
+    };
+
+});
