@@ -402,6 +402,22 @@ z-index:10000;
 .likeBtn:hover{
     background:#ff2d2d;
 }
+.shareBtn{
+    background:#0078ff;
+    color:#fff;
+    border:none;
+    border-radius:20px;
+    padding:8px 18px;
+    font-size:15px;
+    cursor:pointer;
+    margin-top:8px;
+    margin-left:8px;
+    transition:.3s;
+}
+
+.shareBtn:hover{
+    background:#005fd1;
+}
 
 .likeBtn.liked{
     background:#00c853;
