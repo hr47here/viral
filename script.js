@@ -79,3 +79,12 @@ shareBtns.forEach(btn => {
     }, true);
 
 });
+
+const menuToggle=document.getElementById("menuToggle");
+const menu=document.getElementById("menu");
+
+menuToggle.onclick=function(){
+
+menu.classList.toggle("active");
+
+                }
