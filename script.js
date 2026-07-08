@@ -42,7 +42,8 @@ likeBtns.forEach((btn,index)=>{
         btn.classList.add("liked");
     }
 
-    btn.onclick=function(){
+    btn.onclick = function(event) {
+    event.stopPropagation();
 
         if(btn.classList.contains("liked")){
             btn.classList.remove("liked");
