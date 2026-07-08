@@ -442,29 +442,18 @@ z-index:10000;
     box-shadow:0 0 20px rgba(255,0,0,.2);
 }
 .menu-toggle{
-display:none;
-font-size:30px;
-color:white;
-cursor:pointer;
+display:block;
 position:absolute;
 left:20px;
 top:18px;
-z-index:1001;
+font-size:30px;
+color:white;
+cursor:pointer;
+z-index:9999;
 }
 
 .logo{
-margin:auto;
-}
-
-@media(max-width:768px){
-
-.menu-toggle{
-display:block;
-}
-
-.logo{
-text-align:center;
-width:100%;
-}
-
+position:relative;
+z-index:1;
+pointer-events:none;
 }
