@@ -58,24 +58,16 @@ likeBtns.forEach((btn,index)=>{
     };
 
 });
-const shareBtns = document.querySelectorAll(".shareBtn");
+btn.onclick = async function(event){
 
-shareBtns.forEach(btn => {
+    event.preventDefault();
+    event.stopPropagation();
 
-    btn.onclick = async function(event){
-
-        event.stopPropagation();
-
-        try{
-
-            await navigator.share({
-                title:"hr47here",
-                text:"Watch this video",
-                url:window.location.href
-            });
-
-        }catch(err){}
-
-    };
-
-});
+    try{
+        await navigator.share({
+            title:"hr47here",
+            text:"Watch this video",
+            url:window.location.href
+        });
+    }catch(err){}
+};
