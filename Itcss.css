@@ -388,16 +388,21 @@ z-index:10000;
 }
 
 .likeBtn{
-    background:#ff0033;
-    color:white;
+    background:#e50914;
+    color:#fff;
     border:none;
-    padding:8px 14px;
-    border-radius:8px;
+    border-radius:20px;
+    padding:8px 18px;
+    font-size:15px;
     cursor:pointer;
     margin-top:10px;
-    font-weight:bold;
+    transition:0.3s;
+}
+
+.likeBtn:hover{
+    background:#ff2d2d;
 }
 
 .likeBtn.liked{
     background:#00c853;
-   }
+}
