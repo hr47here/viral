@@ -58,16 +58,24 @@ likeBtns.forEach((btn,index)=>{
     };
 
 });
-btn.onclick = async function(event){
+const shareBtns = document.querySelectorAll(".shareBtn");
 
-    event.preventDefault();
-    event.stopPropagation();
+shareBtns.forEach(btn => {
 
-    try{
-        await navigator.share({
-            title:"hr47here",
-            text:"Watch this video",
-            url:window.location.href
-        });
-    }catch(err){}
-};
+    btn.addEventListener("click", async function(e){
+
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+
+        try{
+            await navigator.share({
+                title:"hr47here",
+                text:"Watch this video",
+                url:window.location.href
+            });
+        }catch(err){}
+
+    }, true);
+
+});
