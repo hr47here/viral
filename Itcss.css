@@ -258,13 +258,13 @@ footer{
     background:#1b1b1b;
     border-radius:12px;
     overflow:hidden;
-    transition:.4s;
     cursor:pointer;
+    transition:transform .35s ease, box-shadow .35s ease;
 }
 
 .card:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 25px rgba(229,9,20,.7);
+    transform:translateY(-8px) scale(1.04);
+    box-shadow:0 15px 40px rgba(229,9,20,.45);
 }
 
 .card img{
@@ -396,7 +396,7 @@ z-index:10000;
     font-size:15px;
     cursor:pointer;
     margin-top:10px;
-    transition:0.3s;
+   transition:all .25s ease;
 }
 
 .likeBtn:hover{
@@ -412,7 +412,7 @@ z-index:10000;
     cursor:pointer;
     margin-top:8px;
     margin-left:8px;
-    transition:.3s;
+    transition:all .25s ease;
 }
 
 .shareBtn:hover{
@@ -511,4 +511,23 @@ nav{
     min-width:220px;
 }
 
+}
+body{
+    animation:fadeIn .7s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+button:hover{
+    transform:scale(1.05);
+}
+
+button:active{
+    transform:scale(.95);
 }
