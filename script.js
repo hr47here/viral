@@ -18,19 +18,52 @@ function playVideo(link){
 }
 const searchBox = document.getElementById("searchBox");
 
-searchBox.addEventListener("keyup", function () {
-    const value = this.value.toLowerCase();
-    const cards = document.querySelectorAll(".card");
+searchBox.addEventListener("input", function () {
 
-    cards.forEach(card => {
-        const text = card.innerText.toLowerCase();
+    const value = this.value.toLowerCase().trim();
 
-        if (text.includes(value)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
+    const hero = document.querySelector(".hero");
+    const sections = document.querySelectorAll(".section");
+
+    if(value===""){
+        hero.style.display="block";
+
+        sections.forEach(section=>{
+            section.style.display="block";
+
+            const cards=section.querySelectorAll(".card");
+
+            cards.forEach(card=>{
+                card.style.display="";
+            });
+        });
+
+        return;
+    }
+
+    hero.style.display="none";
+
+    sections.forEach(section=>{
+
+        let found=false;
+
+        const cards=section.querySelectorAll(".card");
+
+        cards.forEach(card=>{
+
+            if(card.innerText.toLowerCase().includes(value)){
+                card.style.display="";
+                found=true;
+            }else{
+                card.style.display="none";
+            }
+
+        });
+
+        section.style.display=found ? "block" : "none";
+
     });
+
 });
 
 const likeBtns = document.querySelectorAll(".likeBtn");
