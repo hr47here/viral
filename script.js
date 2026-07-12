@@ -101,3 +101,27 @@ if(window.scrollY > 30){
 }
 
 });
+const reveals = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", reveal);
+
+function reveal(){
+
+    reveals.forEach(section=>{
+
+        const top = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if(top < windowHeight-100){
+            section.classList.add("active");
+        }
+
+    });
+
+}
+
+reveals.forEach(section=>{
+    section.classList.add("reveal");
+});
+
+reveal();
