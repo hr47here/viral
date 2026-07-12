@@ -88,3 +88,16 @@ menuToggle.onclick=function(){
 menu.classList.toggle("active");
 
                 }
+window.addEventListener("scroll", function () {
+
+const nav = document.querySelector("nav");
+
+if(window.scrollY > 30){
+    nav.style.background = "rgba(0,0,0,0.95)";
+    nav.style.backdropFilter = "blur(15px)";
+}else{
+    nav.style.background = "rgba(0,0,0,0.85)";
+    nav.style.backdropFilter = "blur(10px)";
+}
+
+});
