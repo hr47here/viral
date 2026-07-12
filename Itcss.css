@@ -2,7 +2,9 @@
    hr47here Streaming Platform
    Version 1.0
 =========================== */
-
+html{
+    scroll-behavior:smooth;
+}
 *{
     margin:0;
     padding:0;
