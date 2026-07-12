@@ -491,7 +491,14 @@ nav{
 }
 
 .search{
-    display:none;
+    display:block;
+    width:100%;
+    margin-top:80px;
+}
+
+.search input{
+    width:100%;
+
 }
 
 .overlay{
