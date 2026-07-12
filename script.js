@@ -158,3 +158,14 @@ reveals.forEach(section=>{
 });
 
 reveal();
+// ================= Splash Screen =================
+
+window.addEventListener("load", function () {
+
+    setTimeout(function () {
+
+        document.getElementById("splash").classList.add("hide");
+
+    }, 2000);
+
+});
