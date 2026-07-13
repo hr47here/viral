@@ -36,11 +36,13 @@ nav{
 }
 
 .logo{
+    font-family:'Black Ops One', cursive;
     font-size:34px;
-    font-weight:700;
     color:#e50914;
     letter-spacing:2px;
     cursor:pointer;
+    text-shadow:0 0 8px rgba(229,9,20,.6);
+}
 }
 
 .menu{
