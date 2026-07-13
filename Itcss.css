@@ -584,11 +584,13 @@ button:active{
 }
 
 #splash h1{
+    font-family:'Black Ops One', cursive;
     margin-top:25px;
     color:#e50914;
     font-size:42px;
     letter-spacing:3px;
-    font-weight:700;
+    font-weight:400;
+    text-shadow:0 0 12px rgba(229,9,20,.7);
 }
 
 #splash p{
