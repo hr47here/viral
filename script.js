@@ -169,3 +169,29 @@ window.addEventListener("load", function () {
     }, 2000);
 
 });
+
+const infoBtn=document.getElementById("infoBtn");
+const infoPopup=document.getElementById("infoPopup");
+const closeInfo=document.getElementById("closeInfo");
+
+infoBtn.onclick=function(){
+
+infoPopup.style.display="flex";
+
+}
+
+closeInfo.onclick=function(){
+
+infoPopup.style.display="none";
+
+}
+
+window.onclick=function(e){
+
+if(e.target==infoPopup){
+
+infoPopup.style.display="none";
+
+}
+
+    }
